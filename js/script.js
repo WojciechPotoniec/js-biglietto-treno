@@ -16,11 +16,10 @@ let userage = parseInt(prompt('Inserisci la tua età')); // età scelta dall'use
 let ticketprice = (0.21 * userkilometres); // Esempio: 0.21*10 = 2.10
 
 
-if (isNaN(userage) && isNaN(userkilometres)) // mi darà true se userage non è un numero(NotaNumber)
-
+if (isNaN(userage) || isNaN(userkilometres)) // mi darà true se userage non è un numero(NotaNumber)
 {
     console.log('errore!! Devi inserire un numero.');
-    document.getElementById('finalPrice').innerHTML = `errore!! Devi inserire un numero.`
+    document.getElementById('finalPrice').innerHTML = `Errore!! Devi inserire solo numeri.`
 }
 else{
     if (userage < 18) {
